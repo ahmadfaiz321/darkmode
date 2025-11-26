@@ -1,0 +1,260 @@
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins",serif;
+  
+}
+body{
+    background-color: #f1f1f1;
+}
+.container{
+    width: 80%;
+    margin-inline: auto;
+}
+@media(max-width:992px){
+    .container{
+        width: 90%;
+    }
+}
+
+.navbar{
+    padding: 20px 0 20px 0;
+    list-style-type:none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 87px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.274);
+}
+.navbar-box{    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar-box h1{
+    font-size: 50px;
+    color: blue;   
+}
+.navbar-box .menu{
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.navbar-box .menu li{
+    list-style-type: none;
+}
+.navbar-box .menu li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.navbar-box .menu li a:hover{
+    border-bottom: 3px solid blue;
+}
+.navbar-box .ri-menu-3-line{
+    display: none;
+    font-weight: bold;
+}
+
+@media (max-width:768px){
+    .navbar-box .ri-menu-3-line{
+    display: block;
+}
+
+ .navbar-box .menu{
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    text-align: center;
+    background-color:blue;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+ }
+
+ .navbar-box .menu.menu-active{
+    top: 100px;
+    opacity: 1;
+ }
+
+ .navbar-box .menu li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+
+ }
+.hero{
+    padding-top: 60px;
+}
+}
+.hero-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+    padding: 40px;
+}
+.text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.text-box h1{
+    font-size: 68px;
+    margin-bottom: 0px;
+    color: blue;
+}
+.text-box p{
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+.text-box a{
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    width: 179px;
+    height: none;
+    font-weight: 700;
+
+}
+.box{
+    width:550px;
+    height: 350px;
+    overflow: hidden;
+
+}
+.box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+.layanan{
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.layanan-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.layanan-box .layanan{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.445);
+    cursor: pointer;
+}
+.layanan-box .layanan:hover{
+    background-color: blue;
+}
+.layanan-box .layanan:hover > *{
+    color: white;
+}
+.layanan-box .layanan i{
+    color: blue;
+}
+.layanan-box .layanan h2{
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+.container h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+.container-footer{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.container-footer ul li{
+    list-style-type:none;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container-footer ul li:hover{
+    background-color: blue;
+}
+.container-footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.089);
+}
+#tombol-mode{
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+/* ==== MODE GANTI"WARNA  ==== */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+.dark-mode .navbar {
+  background-color: #1e1e1e;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .navbar-box h1 {
+  color: #4da3ff;
+}
+.dark-mode .navbar-box .menu li a {
+  color: white;
+}
+.dark-mode .layanan-box .layanan {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
+}
+.dark-mode .layanan-box .layanan:hover {
+  background-color: #4da3ff;
+}
+.dark-mode .container-footer ul li {
+  background-color: #1e1e1e;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.1);
+}
+.dark-mode #tombol-mode {
+  background-color: white;
+  color: black;
+}
+.bawah p{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    list-style-type:none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 87px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.274);
+    color: blue;
+
+}
